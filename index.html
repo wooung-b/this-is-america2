@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta property="og:image" content="thumbnail.png">
+	<meta property="og:title" content="This Is America">
+	<meta property="og:description" content="THIS is America? DISS is America!">
+
+	<meta charset="utf-8">
+	<title>This Is America</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script src="https://use.typekit.net/dcf1ame.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<link href="https://fonts.googleapis.com/css?family=Archivo+Black&amp;subset=latin-ext" rel="stylesheet">
+
+	<style>
+		a:link, a:active, a:visited{ color: white; }
+		body{background: url('./img/logo.png') no-repeat fixed; background-size: 32% auto; background-position: 50% 105%; background-color: black;}
+
+		* {box-sizing: border-box}
+		.mySlides {display: none}
+		img {vertical-align: middle;}
+
+		/* Slideshow container */
+		.slideshow-container {
+		  max-width: 1130px;
+		  padding-top: 215px;
+		  position: relative;
+		  margin: auto;
+		}
+
+		/* Next & previous buttons */
+		.prev, .next {
+		  cursor: pointer;
+		  position: absolute;
+		  top: 62%;
+		  width: auto;
+		  padding: 16px;
+		  margin-top: -22px;
+		  color: white;
+		  font-weight: bold;
+		  font-size: 18px;
+		  transition: 0.6s ease;
+		  border-radius: 0 3px 3px 0;
+		}
+
+		/* Position the "next button" to the right */
+		.next {
+		  right: 0;
+		  border-radius: 3px 0 0 3px;
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover, .next:hover {
+		  background-color: rgba(0,0,0,0.8);
+		}
+
+		/* The dots/bullets/indicators */
+		.dot {
+		  cursor: pointer;
+		  height: 10px;
+		  width: 10px;
+		  margin: 0 2px;
+		  background-color: white;
+		  border-radius: 50%;
+		  display: inline-block;
+		  transition: background-color 0.6s ease;
+		}
+
+		.active, .dot:hover {
+		  background-color: #717171;
+		}
+
+		/* Fading animation */
+		.fade {
+		  -webkit-animation-name: fade;
+		  -webkit-animation-duration: 1.5s;
+		  animation-name: fade;
+		  animation-duration: 1.5s;
+		}
+
+		@-webkit-keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
+
+		@keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+	<div class="wrap" id="home">
+		<nav>
+			<div id="logo">
+				<a href="index.html"><img src="./img/logo.png"></a>
+			</div>
+			<ul id="menuList">
+				<li class="main-menu-item">
+					<a href="this-is-america.html">THIS IS<br>AMERICA</a>
+				</li>
+				<li class="main-menu-item">
+					<a href="diss-is-america.html">DISS IS<br>AMERICA</a>
+				</li>
+				<li class="main-menu-item">
+					<a href="childish-gambino.html">CHILDISH<br>GAMBINO</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="slideshow-container">
+
+		<div class="mySlides fade">
+		  <img src="./img/home.png" style="width:100%">
+		</div>
+
+		<div class="mySlides fade">
+		  <img src="./img/wow2.jpg" style="width:100%">
+		</div>
+
+		<div class="mySlides fade">
+		  <img src="./img/with.png" style="width:100%">
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		</div>
+		<br>
+
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span> 
+		  <span class="dot" onclick="currentSlide(2)"></span> 
+		  <span class="dot" onclick="currentSlide(3)"></span> 
+		</div>
+		
+		<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+		</script>
+	</header>
+
+	<footer>
+		<div class="wrap" id="footer">
+			<div class="info">
+			<p>이원비<br>wooungb02@gmail.com<br>This Is America - Childish Gambino</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
